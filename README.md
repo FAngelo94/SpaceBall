@@ -1,2 +1,2 @@
 # SpaceBall
-Game done with Corona
+An easy game done with Corona: https://coronalabs.com/
