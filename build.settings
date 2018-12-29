@@ -1,0 +1,67 @@
+--
+-- For more information on build.settings see the Corona SDK Build Guide at:
+-- https://docs.coronalabs.com/guide/distribution/buildSettings
+--
+
+settings =
+{
+	orientation =
+	{
+		-- Supported values for orientation:
+		-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+
+		default = "landscape",
+		supported = { "landscape", },
+	},
+	
+	excludeFiles =
+	{
+		-- Include only the necessary icon files on each platform
+		android = { "Icon.png", },
+	},
+	
+	--
+	-- Android Section
+	--
+	android =
+	{
+		usesPermissions =
+        {
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_NETWORK_STATE"
+        },
+	},
+	--
+	--Plugin Section
+	--
+	plugins =
+      {
+        ["plugin.google.play.services"] =
+        {
+          publisherId = "com.coronalabs",
+          supportedPlatforms = { android=true }
+        },
+        ["shared.android.support.v4"] =
+        {
+          publisherId = "com.coronalabs",
+          supportedPlatforms = { android=true }
+        },
+        ["plugin.coronaAds"] =
+        {
+          publisherId = "com.coronalabs",
+          supportedPlatforms = { android=true }
+        },
+        ["plugin.chartboost"] =
+        {
+          publisherId = "com.coronalabs",
+          supportedPlatforms = { android=true }
+        },
+        ["plugin.adcolony"] =
+        {
+          publisherId = "com.coronalabs",
+          supportedPlatforms = { android=true }
+        }
+	}		
+}
